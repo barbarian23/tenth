@@ -1,0 +1,7 @@
+node_modules/
+tenth/dist/
+tenth/node_modules/
+package-lock.json
+release-builds
+dist
+tenth/*.xlsx
