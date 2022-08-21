@@ -46,6 +46,6 @@ export const SOCKET_INTERVAL_EACH_PHONE_URL = "/intervalEachInfo";
 export const SOCKET_LOGIN_GO_HOME = "SOCKET_LOGIN_GO_HOME";
 
 //chung
-export const PORT = 9193;
+export const PORT = 9183;
 export const MAIN_URL = "http://localhost:" + PORT;
 export const ECLECTRON_LOAD = "http://localhost:" + PORT;

@@ -1,5 +1,4 @@
 import socketServer from "../../service/socket/socket.server.service";
-import csvService from "../../service/csv/csv.server.service";
 import {
     SOCKET_LOGIN,
     SOCKET_OTP,
@@ -39,26 +38,11 @@ var WAIT_TIME = 8000;
 var socket = null;
 
 // const seleniumInsstance = new seleniumCrawl();
-const csvInstance = new csvService();
+
 
 var countInterval = 0, mainInterval = null;
 
 let arrayNumber = [];
-try {
-    arrayNumber = csvInstance.readFile();
-    arrayNumber.forEach((item,index) => {
-        if(item){
-            if(item.money){
-                item.money = item.money.replace(/\./g,"");
-            }
-            if(item.info){
-                item.info = item.money.replace(/\./g,"");
-            }
-        }
-    });
-} catch (e) {
-    console.error("loi doc file csv", e);
-}
 
 function timer(ms) {
     return new Promise(res => setTimeout(res, ms));
